@@ -1,0 +1,29 @@
+{
+  "schema_version": "dqf-signature-0.1",
+  "site_root": "synthetic-site",
+  "phase": "build",
+  "run_id": "DQF-20260725-INVALID",
+  "viewports": [
+    { "id": "desktop", "width": 1440, "height": 900 },
+    { "id": "mobile", "width": 390, "height": 844 }
+  ],
+  "families": [
+    {
+      "family_id": "LF-SERVICE-001",
+      "representative": "/servizi/intervento-prioritario/",
+      "landmarks": [
+        { "name": "header", "required": true, "order": 1 },
+        { "name": "main", "required": true, "order": 2 },
+        { "name": "footer", "required": true, "order": 3 }
+      ],
+      "components": [],
+      "slots": [],
+      "interactions": [],
+      "viewport_rules": {},
+      "promotion_triggers": []
+    }
+  ],
+  "routes": [
+    { "url": "/servizi/intervento-prioritario/", "family_id": "LF-MISSING-999", "candidate_role": "member", "expected_fx": "FX-011" }
+  ]
+}

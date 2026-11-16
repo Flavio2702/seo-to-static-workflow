@@ -1,0 +1,23 @@
+# Private projects, runtime, credentials and local tools
+projects/
+private/
+runtime/
+.env
+.env.*
+!.env.example
+*.local.json
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+output/
+test-results/
+playwright-report/
+.impeccable/
+.playwright/
+.playwright-mcp/
+.vscode/
+*.log
+*.zip
+*.db
+*.sqlite*

@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "research": "synthetic-hypotheses-not-live",
+  "base_url": "https://flavio2702.github.io/seo-to-static-workflow/site/",
+  "business": "Trama Minuta",
+  "pages": [
+    {
+      "slug": "",
+      "label": "Il laboratorio",
+      "intent": "Capire offerta e processo",
+      "keyword": "rilegatura artigianale",
+      "title": "Trama Minuta | Rilegatura artigianale a Borgo Carta",
+      "h1": "Le pagine restano.\nLa copertina ricomincia.",
+      "description": "Quaderni su misura e riparazione di copertine: scopri il laboratorio immaginario Trama Minuta e come preparare una richiesta.",
+      "eyebrow": "Trama Minuta / Laboratorio di rilegatura",
+      "intro": "Quaderni da riempire. Volumi da continuare a leggere. A Borgo Carta, Trama Minuta lavora sulle cose di carta che vuoi tenere vicino.",
+      "sections": [
+        {
+          "heading": "Un nuovo inizio, fatto di carta",
+          "text": "Un quaderno nasce dal modo in cui lo userai: appunti, disegni, pensieri da conservare. Formato, carta e copertina si scelgono insieme, prima della rilegatura."
+        },
+        {
+          "heading": "Un libro ancora da vivere",
+          "text": "Una copertina allentata o un dorso consumato non raccontano da soli quale intervento serva. Il laboratorio valuta lo stato del volume prima di proporre una riparazione."
+        },
+        {
+          "heading": "Prima le domande, poi il lavoro",
+          "text": "Descrivi il progetto e le misure. Il laboratorio valuta materiali e lavorazioni. Tempi e proposta vengono concordati prima di iniziare."
+        }
+      ],
+      "source": "brief:offer,process",
+      "links": [
+        "rilegatura-quaderni",
+        "riparazione-libri",
+        "richiesta"
+      ]
+    },
+    {
+      "slug": "rilegatura-quaderni",
+      "label": "Quaderni su misura",
+      "intent": "Valutare un quaderno personalizzato",
+      "keyword": "rilegatura quaderni",
+      "title": "Rilegatura quaderni su misura | Trama Minuta",
+      "h1": "Un quaderno,\nil tuo modo di usarlo.",
+      "description": "Formato, carta e copertina: le scelte da descrivere per un quaderno su misura nel laboratorio immaginario Trama Minuta.",
+      "eyebrow": "01 / Quaderni su misura",
+      "intro": "Per gli appunti di ogni giorno o per un progetto che vuoi raccogliere. Si parte dall’uso, non da un modello da riempire.",
+      "sections": [
+        {
+          "heading": "A cosa serviranno le pagine?",
+          "text": "Racconta se scriverai, disegnerai o raccoglierai materiali. Indica il formato desiderato e se il quaderno ti accompagnera fuori casa."
+        },
+        {
+          "heading": "Carta e copertina si scelgono insieme",
+          "text": "Il laboratorio valuta i materiali rispetto al progetto. Le scelte vengono definite nella proposta, prima di iniziare la rilegatura."
+        },
+        {
+          "heading": "Cosa preparare per la richiesta",
+          "text": "Descrivi uso, misure e preferenze. Se hai gia fogli da rilegare, indica anche la loro quantita e il formato."
+        }
+      ],
+      "source": "brief:offer[0],process",
+      "links": [
+        "",
+        "richiesta"
+      ]
+    },
+    {
+      "slug": "riparazione-libri",
+      "label": "Libri da recuperare",
+      "intent": "Capire ambito e limiti della riparazione",
+      "keyword": "riparazione libri",
+      "title": "Riparazione di copertine e dorsi | Trama Minuta",
+      "h1": "C’e ancora\nuna pagina da girare.",
+      "description": "Copertine e dorsi di volumi quotidiani: scopri cosa descrivere prima di richiedere una valutazione al laboratorio immaginario Trama Minuta.",
+      "eyebrow": "02 / Libri da recuperare",
+      "intro": "Un volume di uso quotidiano, una copertina che cede, un dorso consumato. Prima di intervenire, bisogna capire come sta il libro.",
+      "sections": [
+        {
+          "heading": "La valutazione viene prima",
+          "text": "Descrivi il danno, le dimensioni e l’uso del volume. Il laboratorio valuta quali lavorazioni proporre; tempi e proposta sono concordati prima del lavoro."
+        },
+        {
+          "heading": "Il perimetro del laboratorio",
+          "text": "Il servizio riguarda copertine e dorsi di volumi quotidiani. Non comprende restauro di beni antichi o vincolati."
+        },
+        {
+          "heading": "Cosa indicare nella richiesta",
+          "text": "Spiega quali parti si sono allentate o consumate. Segnala eventuali fogli staccati, senza tentare di incollarli per preparare la richiesta."
+        }
+      ],
+      "source": "brief:offer[1],limits[0],process",
+      "links": [
+        "",
+        "richiesta"
+      ]
+    },
+    {
+      "slug": "richiesta",
+      "label": "Prepara la richiesta",
+      "intent": "Conoscere le informazioni necessarie al contatto",
+      "keyword": null,
+      "title": "Prepara la tua richiesta | Trama Minuta",
+      "h1": "Cominciamo\nda quello che hai in mente.",
+      "description": "Una breve traccia per descrivere il tuo quaderno o volume: uso, misure e stato. La demo non raccoglie e non invia dati.",
+      "eyebrow": "03 / Il prossimo passo",
+      "intro": "Poche informazioni aiutano a capire il progetto. Puoi usarle come traccia per mettere a fuoco cio che ti serve.",
+      "sections": [
+        {
+          "heading": "Se vuoi un quaderno",
+          "text": "Indica come lo userai, le misure desiderate e le preferenze per carta e copertina. Se parti da fogli tuoi, descrivine formato e quantita."
+        },
+        {
+          "heading": "Se vuoi recuperare un volume",
+          "text": "Descrivi le dimensioni, lo stato della copertina e del dorso e l’uso del libro. Il laboratorio deve valutare il volume prima di proporre il lavoro."
+        },
+        {
+          "heading": "Una demo senza invii",
+          "text": "Trama Minuta e un’attivita inventata. Questa pagina non contiene moduli, non raccoglie richieste e non attiva contatti."
+        }
+      ],
+      "source": "brief:conversion,process,contacts",
+      "links": [
+        "",
+        "rilegatura-quaderni",
+        "riparazione-libri"
+      ]
+    }
+  ],
+  "excluded": [
+    "Pagine per quartiere: nessuna offerta differenziata",
+    "Recensioni: nessuna prova",
+    "Negozio online: fuori brief",
+    "Restauro antico: fuori servizio"
+  ]
+}

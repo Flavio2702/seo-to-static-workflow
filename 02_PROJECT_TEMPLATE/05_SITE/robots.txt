@@ -1,0 +1,7 @@
+# Dominio non confermato: nessuna riga Sitemap finche il dominio reale non e confermato.
+# La conferma del dominio e una lacuna bloccante: tracciarla in 01_INPUT/MISSING_INFO.md.
+User-agent: *
+Allow: /
+
+# Aggiungere solo dopo conferma dominio:
+# Sitemap: https://www.dominio-reale.it/sitemap.xml

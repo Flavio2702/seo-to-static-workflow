@@ -1,0 +1,27 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "[URL sito]#business",
+  "name": "[Nome attivita confermato]",
+  "description": "[Descrizione breve confermata: cosa offre e dove]",
+  "url": "[URL sito]",
+  "telephone": "[Telefono confermato, formato +39...]",
+  "image": ["[URL assoluto di immagine reale confermata]"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Indirizzo confermato]",
+    "addressLocality": "[Citta confermata]",
+    "postalCode": "[CAP confermato]",
+    "addressCountry": "IT"
+  },
+  "areaServed": ["[Zona servita reale confermata]"],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["[Giorno confermato, es. Monday]"],
+      "opens": "[HH:MM]",
+      "closes": "[HH:MM]"
+    }
+  ],
+  "sameAs": ["[URL profilo confermato, es. Google Business Profile o social]"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "design-qa-fast-lane",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "install:browsers": "playwright install chromium --only-shell",
+    "self-test": "playwright test --config=playwright.config.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.0"
+  }
+}

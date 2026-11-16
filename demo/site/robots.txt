@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://flavio2702.github.io/seo-to-static-workflow/site/sitemap.xml

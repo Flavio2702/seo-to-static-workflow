@@ -1,0 +1,65 @@
+name: Verify and publish demo
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.14'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/demo.py --check
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: 04_TOOLS/design-qa-fast-lane
+      - run: npx playwright install --with-deps chromium --only-shell
+        working-directory: 04_TOOLS/design-qa-fast-lane
+      - run: npm run self-test
+        working-directory: 04_TOOLS/design-qa-fast-lane
+      - name: Gitleaks files and full history
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/gitleaks"
+          cd "$RUNNER_TEMP/gitleaks"
+          curl -fsSLO https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          curl -fsSLO https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_checksums.txt
+          grep ' gitleaks_8.30.1_linux_x64.tar.gz$' gitleaks_8.30.1_checksums.txt | sha256sum -c -
+          tar -xzf gitleaks_8.30.1_linux_x64.tar.gz
+          cd "$GITHUB_WORKSPACE"
+          "$RUNNER_TEMP/gitleaks/gitleaks" dir . --redact --no-banner
+          "$RUNNER_TEMP/gitleaks/gitleaks" git . --log-opts="--all" --redact --no-banner
+      - name: Stage only public static demo
+        run: |
+          mkdir -p runtime/pages/site
+          cp -R demo/site/. runtime/pages/site/
+          printf '<!doctype html><html lang="it"><meta charset="utf-8"><meta name="robots" content="noindex"><title>SEO to Static Workflow</title><h1>SEO to Static Workflow</h1><p><a href="site/">Apri il sito dimostrativo</a></p><p><a href="https://github.com/Flavio2702/seo-to-static-workflow/tree/main/demo">Brief, elaborati SEO e riproduzione</a></p></html>' > runtime/pages/index.html
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
+        if: github.event_name != 'pull_request'
+        with:
+          path: runtime/pages
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish static demo
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e
